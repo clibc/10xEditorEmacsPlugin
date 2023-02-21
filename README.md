@@ -5,7 +5,7 @@ This is not, in any way, a fully functional Emacs emulation. There are only feat
 #### Features
 - Mark emulation
 - Block jump
-- Kill line (this feature requires clipboard library. If library is not present Ring buffer will be disabled, but other features going to work just fine)
+- Kill line (this feature requires clipboard library. If library is not present Kill line will be disabled, but other features going to work just fine)
 
 #### Commands
 - `EmacsSetCursor` - set mark
