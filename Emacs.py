@@ -85,4 +85,4 @@ try:
 			RingBuffer = ""
 	Editor.AddOnInterceptKeyFunction(__OnCharKey)
 except ModuleNotFoundError:
-    print("Emacs: clipboard module is not found, ring buffer is disabled")
+    print("Emacs: clipboard module is not found, kill line is disabled")
