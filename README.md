@@ -1,4 +1,4 @@
-# 10xEditorEmacsPlugin - [10xEditor](https://10xeditor.com/)
+# Emacs plugin for [10xEditor](https://10xeditor.com/)
 
 This is not, in any way, a fully functional Emacs emulation. There are only features that I use (which is not much).
 
