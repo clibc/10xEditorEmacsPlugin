@@ -1,4 +1,6 @@
-# 10xEditorEmacsPlugin
+# 10xEditorEmacsPlugin - [10xEditor](https://10xeditor.com/)
+
+This is not, in any way, a fully functional Emacs emulation. There are only features that I use (which is not much).
 
 #### Features
 - Mark emulation
@@ -15,7 +17,7 @@
 - `EmacsJumpBlockUp` - Jumps to previous empty line
 - `EmacsJumpBlockDown` - Jumps to next empty line
 
-Scroll amount changed via `ScrollLineCount` variable in `Emacs.py`.
+Scroll amount can be changed via `ScrollLineCount` variable in `Emacs.py`.
 
 #### Installation
 Copy `Emacs.py` to `%appdata%/10x/PythonScripts` .
