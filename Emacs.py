@@ -6,7 +6,7 @@ CursorStartPos = (0, 0)
 def EmacsSetCursor():
 	global CursorStartPos
 	CursorStartPos = Editor.GetCursorPos()
-	Editor.SetStatusBarText("Cursor set " + str(CursorStartPos ))
+	Editor.SetStatusBarText("Cursor set " + str(CursorStartPos))
 
 def EmacsCopy():
 	CurrentCursorPos = Editor.GetCursorPos()
@@ -66,3 +66,23 @@ def EmacsJumpBlockDown():
 		if Line.isspace():
 			break
 	Editor.SetCursorPos((0, CursorY))
+
+try:
+	import clipboard
+	print("Emacs: clipboard module is found")
+	RingBuffer = ""
+
+	def EmacsCutRingBuffer():
+		global RingBuffer
+		Editor.ExecuteCommand("Cut")
+		RingBuffer += clipboard.paste()
+		clipboard.copy(RingBuffer)
+		print(RingBuffer)
+
+	def __OnCharKey(Key, Shift, Control, Alt):
+		global RingBuffer
+		if Key == "Up" or Key == "Down" or Key == "Left" or Key == "Right":
+			RingBuffer = ""
+	Editor.AddOnInterceptKeyFunction(__OnCharKey)
+except ModuleNotFoundError:
+    print("Emacs: clipboard module is not found, ring buffer is disabled")

@@ -5,6 +5,7 @@ This is not, in any way, a fully functional Emacs emulation. There are only feat
 #### Features
 - Mark emulation
 - Block jump
+- Ring buffer (this feature requires clipboard library. If library is not present Ring buffer will be disabled, but other features going to work just fine)
 
 #### Commands
 - `EmacsSetCursor` - set mark
@@ -21,5 +22,7 @@ Scroll amount can be changed via `ScrollLineCount` variable in `Emacs.py`.
 
 #### Installation
 Copy `Emacs.py` to `%appdata%/10x/PythonScripts` .
+
+`clipboard` installation : `pip install --target="C:\Program Files\PureDevSoftware\10x" clipboard`
 
 Set keyboard shortcuts in 10xEditor.
