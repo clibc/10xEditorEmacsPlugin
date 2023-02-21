@@ -72,7 +72,7 @@ try:
 	print("Emacs: clipboard module is found")
 	RingBuffer = ""
 
-	def EmacsCutRingBuffer():
+	def EmacsKillLine():
 		global RingBuffer
 		Editor.ExecuteCommand("Cut")
 		RingBuffer += clipboard.paste()

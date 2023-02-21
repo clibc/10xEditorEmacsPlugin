@@ -5,7 +5,7 @@ This is not, in any way, a fully functional Emacs emulation. There are only feat
 #### Features
 - Mark emulation
 - Block jump
-- Ring buffer (this feature requires clipboard library. If library is not present Ring buffer will be disabled, but other features going to work just fine)
+- Kill line (this feature requires clipboard library. If library is not present Ring buffer will be disabled, but other features going to work just fine)
 
 #### Commands
 - `EmacsSetCursor` - set mark
@@ -17,6 +17,7 @@ This is not, in any way, a fully functional Emacs emulation. There are only feat
 - `EmacsScrollDown` - Scrolls down by `ScrollLineCount`
 - `EmacsJumpBlockUp` - Jumps to previous empty line
 - `EmacsJumpBlockDown` - Jumps to next empty line
+- `EmacsKillLine` - kill-whole-line
 
 Scroll amount can be changed via `ScrollLineCount` variable in `Emacs.py`.
 
